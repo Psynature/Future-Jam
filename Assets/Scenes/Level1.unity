@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 669643993}
   - component: {fileID: 669643992}
   m_Layer: 0
-  m_Name: GameSession
+  m_Name: Enemy Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -252,6 +252,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1681046705 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3532618753469356828, guid: b39896d8f1cb96649a3b398465450bb8,
+    type: 3}
+  m_PrefabInstance: {fileID: 3532618753938171821}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &1681046710
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681046705}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.08
 --- !u!1 &1895281763
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,15 +6,12 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] List<WaveConfigurator> waveConfigurators;
     [SerializeField] int startingWave = 0;
-    [SerializeField] bool spawnsActive = true;
-    [SerializeField] private int endLevelCounter = 0;
+   // [SerializeField] bool spawnsActive = true;
+  //  [SerializeField] private int endLevelCounter = 0;
 
-    IEnumerator Start()
+    void Start()
     {
-        while(spawnsActive)
-        {
-           yield return StartCoroutine(SpawnAllWavesInLevel());
-        }
+        StartCoroutine(SpawnAllWavesInLevel());
     }
 
     private IEnumerator SpawnAllWavesInLevel()

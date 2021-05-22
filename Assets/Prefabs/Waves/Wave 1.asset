@@ -18,6 +18,6 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 1
   numberOfEnemies: 10
-  movementSpeed: 1
+  movementSpeed: 10
   doubelWave: 0
   staggerTime: 0

@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : Player
 {
     [SerializeField]
     private float movementSpeed = 10;
     private Vector2 movement;
     private Rigidbody2D rb;
-    private Vector2 playerSize; 
 
     [SerializeField]
     private float playerPadding;
@@ -17,12 +16,11 @@ public class PlayerMovement : MonoBehaviour
     private float xMax;
     private float yMin;
     private float yMax;
-    private Camera gameCamera;
 
     private void Start()
     {
+        // Get the rigidbody of our player object
         rb = this.GetComponent<Rigidbody2D>();
-        playerSize = this.GetComponent<Renderer>().bounds.size;
         gameCamera = Camera.main;
         MovementBoundaries();
     }
@@ -36,6 +34,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // we use FixedUpdate to control movement because we're applying force to our object
+        // and Update is called once per frame, however this is called at fixed intervals so will not vary
         PlayerMove(movement);
     }
 

@@ -5,6 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "WaveConfigurator", menuName = "Enemy Wave Config", order = 0)]
 public class WaveConfigurator : ScriptableObject
 {
+    // This is what we'll use to configue waves in the Unity Editor, 
+    // We won't have to programatically configure them now we have this
     [SerializeField] GameObject enemyPrefab;
     [SerializeField] GameObject pathPrefab;
     [SerializeField] float timeBetweenSpawns;
