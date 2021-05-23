@@ -23,3 +23,4 @@ MonoBehaviour:
   enemyHealth: 0
   enemyAimingSpeed: 10
   enemyMovementSpeed: 3
+  enemyScoreValue: 10

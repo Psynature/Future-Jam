@@ -20,6 +20,7 @@ public class WaveConfigurator : ScriptableObject
     [SerializeField] float enemyHealth;
     [SerializeField] float enemyAimingSpeed;
     [SerializeField] float enemyMovementSpeed;
+    [SerializeField] int enemyScoreValue;
 
     public GameObject GetEnemyPrefab() {return enemyPrefab;}
 
@@ -40,7 +41,5 @@ public class WaveConfigurator : ScriptableObject
     public float GetStaggerTime() {return staggerTime;}
     public float GetEnemyHealth() {return enemyHealth;}
     public float GetEnemyAimingSpeed() {return enemyAimingSpeed;}
-
-    
-
+    public int GetEnemyScoreValue() {return enemyScoreValue;}
 }
