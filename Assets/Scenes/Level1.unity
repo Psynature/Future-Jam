@@ -151,6 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveConfigurators:
+  - {fileID: 11400000, guid: d1fe5a5e8d587c5489a3d2eb4ea20363, type: 2}
   - {fileID: 11400000, guid: ba30b74bab0aa51428d69d3b80418800, type: 2}
   - {fileID: 11400000, guid: 603b9aa957ebf8d4b9bf81c3a3a629cf, type: 2}
   - {fileID: 11400000, guid: f97204e01bf37df4cb3bc45e19b4ab27, type: 2}
@@ -382,6 +383,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3532618753469356830, guid: b39896d8f1cb96649a3b398465450bb8,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3532618753469356830, guid: b39896d8f1cb96649a3b398465450bb8,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3532618753469356830, guid: b39896d8f1cb96649a3b398465450bb8,
         type: 3}
