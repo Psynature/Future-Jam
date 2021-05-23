@@ -2,29 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyPathing : MonoBehaviour
+public class EnemyPathing : Enemy
 {
     // This is our base class for enemy movement,
     // all our other movement subclasses will derive from this
-    protected WaveConfigurator waveConfigurator;
-    protected List<Transform> waypoints;
-    protected float movementThisFrame;
-    [SerializeField] protected float aimingSpeed;
     protected float dirOfTravel;
+    protected float movementThisFrame;
     private Quaternion desiredRotation;
-
-    // When the enemy is spawned, pull all the settings from the WaveConfigurator for the current wave
-    public void SetWaveConfig(WaveConfigurator waveConfig)
-    {
-        this.waveConfigurator = waveConfig;
-        waypoints = waveConfigurator.GetWaypoints();
-        transform.position = waypoints[0].transform.position;
-    }
 
     // Pretty self explanatory, our base movement 
     protected void EnemyMovement()
     {
-        movementThisFrame = waveConfigurator.GetMoveSpeed() * Time.deltaTime;
+        movementThisFrame = waveConfigurator.GetEnemyMoveSpeed() * Time.deltaTime;
     }
     
     protected void EnemyTurning()

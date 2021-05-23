@@ -9,11 +9,17 @@ public class WaveConfigurator : ScriptableObject
     // We won't have to programatically configure them now we have this
     [SerializeField] GameObject enemyPrefab;
     [SerializeField] GameObject pathPrefab;
+
+    [Header("Wave Config")]
     [SerializeField] float timeBetweenSpawns;
     [SerializeField] int numberOfEnemies;
-    [SerializeField] float movementSpeed;
-    [SerializeField] bool doubelWave;
+    [SerializeField] bool doubleWave;
     [SerializeField] float staggerTime;
+
+    [Header("Enemy Stats")]
+    [SerializeField] float enemyHealth;
+    [SerializeField] float enemyAimingSpeed;
+    [SerializeField] float enemyMovementSpeed;
 
     public GameObject GetEnemyPrefab() {return enemyPrefab;}
 
@@ -29,8 +35,12 @@ public class WaveConfigurator : ScriptableObject
 
     public float GetTimeBetweenSpawns() {return timeBetweenSpawns;}
     public int GetNumberOfEnemies() {return numberOfEnemies;}
-    public float GetMoveSpeed() {return movementSpeed;}
-    public bool GetDoubleWave() {return doubelWave;}
+    public float GetEnemyMoveSpeed() {return enemyMovementSpeed;}
+    public bool GetDoubleWave() {return doubleWave;}
     public float GetStaggerTime() {return staggerTime;}
+    public float GetEnemyHealth() {return enemyHealth;}
+    public float GetEnemyAimingSpeed() {return enemyAimingSpeed;}
+
+    
 
 }

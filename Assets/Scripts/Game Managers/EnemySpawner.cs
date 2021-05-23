@@ -6,7 +6,7 @@ public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] List<WaveConfigurator> waveConfigurators;
     [SerializeField] int startingWave = 0;
-   // [SerializeField] bool spawnsActive = true;
+    // [SerializeField] bool spawnsActive = true;
   //  [SerializeField] private int endLevelCounter = 0;
 
     void Start()
@@ -42,7 +42,7 @@ public class EnemySpawner : MonoBehaviour
                 waveConfigurator.GetEnemyPrefab(),
                 waveConfigurator.GetWaypoints()[0].transform.position,
                 waveConfigurator.GetEnemyPrefab().transform.rotation);
-            newEnemy.GetComponent<EnemyPathing>().SetWaveConfig(waveConfigurator);
+            newEnemy.GetComponent<Enemy>().SetWaveConfig(waveConfigurator);
             yield return new WaitForSeconds(waveConfigurator.GetTimeBetweenSpawns());        
         }
     }

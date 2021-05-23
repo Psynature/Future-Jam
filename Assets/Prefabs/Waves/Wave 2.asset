@@ -18,6 +18,8 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 1
   numberOfEnemies: 10
-  movementSpeed: 10
-  doubelWave: 0
+  doubleWave: 0
   staggerTime: 0
+  enemyHealth: 0
+  enemyAimingSpeed: 10
+  enemyMovementSpeed: 10
