@@ -22,6 +22,7 @@ public class PlayerMovement : Player
         // Get the rigidbody of our player object
         rb = this.GetComponent<Rigidbody2D>();
         gameCamera = Camera.main;
+        CalculatePlayerSize();
         MovementBoundaries();
     }
 

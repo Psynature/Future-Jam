@@ -22,19 +22,19 @@ public class EnemyPathing : MonoBehaviour
     }
 
     // Pretty self explanatory, our base movement 
-    public void EnemyMovement()
+    protected void EnemyMovement()
     {
         movementThisFrame = waveConfigurator.GetMoveSpeed() * Time.deltaTime;
     }
     
-    public void EnemyTurning()
+    protected void EnemyTurning()
     {
         // Will probably have to move this stuff out of here as each enemy type will likely have completley different requierements
         desiredRotation = Quaternion.Euler(0, 0, dirOfTravel);
         transform.rotation = Quaternion.Lerp(transform.rotation, desiredRotation, (aimingSpeed * Time.deltaTime) / 2);
     }
 
-    public void EnemyCompletedWave()
+    protected void EnemyCompletedWave()
     {
         // What we do when the enemy reaches the final  waypoint in its path
         Destroy(gameObject);

@@ -152,9 +152,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waveConfigurators:
   - {fileID: 11400000, guid: f97204e01bf37df4cb3bc45e19b4ab27, type: 2}
+  - {fileID: 11400000, guid: 603b9aa957ebf8d4b9bf81c3a3a629cf, type: 2}
   startingWave: 0
-  spawnsActive: 1
-  endLevelCounter: 0
 --- !u!4 &669643993
 Transform:
   m_ObjectHideFlags: 0

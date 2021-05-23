@@ -9,8 +9,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // we'll use the playersize to ensure we don't go off the screen, no matter how large or small we are.
-        CalculatePlayerSize();
+
     }
 
     // Update is called once per frame
@@ -18,6 +17,7 @@ public class Player : MonoBehaviour
     {
         
     }
+    // we'll use the playersize to ensure we don't go off the screen, no matter how large or small we are.
     protected void CalculatePlayerSize()
     {
         playerSize = this.GetComponent<Renderer>().bounds.size;
