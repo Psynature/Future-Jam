@@ -6,16 +6,10 @@ public class Player : MonoBehaviour
 {
     protected Vector2 playerSize; 
     protected Camera gameCamera;
-    // Start is called before the first frame update
+
     void Start()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        CalculatePlayerSize();
     }
     // we'll use the playersize to ensure we don't go off the screen, no matter how large or small we are.
     protected void CalculatePlayerSize()

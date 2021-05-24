@@ -16,11 +16,11 @@ public class EnemyPathing : Enemy
         movementThisFrame = waveConfigurator.GetEnemyMoveSpeed() * Time.deltaTime;
     }
     
-    protected void EnemyTurning()
+    protected virtual void EnemyTurning()
     {
-        // Will probably have to move this stuff out of here as each enemy type will likely have completley different requierements
+        // if you need to change this in a derived class use "overide void EnemyTurning()"
         desiredRotation = Quaternion.Euler(0, 0, dirOfTravel);
-        transform.rotation = Quaternion.Lerp(transform.rotation, desiredRotation, (aimingSpeed * Time.deltaTime) / 2);
+        transform.rotation = Quaternion.Lerp(transform.rotation, desiredRotation, (turningSpeed * Time.deltaTime) / 2);
     }
 
     protected void EnemyCompletedWave()

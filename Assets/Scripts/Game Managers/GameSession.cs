@@ -17,6 +17,7 @@ public class GameSession : MonoBehaviour
     {
         score = 0;
         UpdateScore(0);
+        Cursor.lockState = CursorLockMode.Confined;
     }
     void Update()
     {

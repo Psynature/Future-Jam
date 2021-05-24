@@ -10,7 +10,10 @@ public class Enemy : MonoBehaviour
     protected WaveConfigurator waveConfigurator;
     protected List<Transform> waypoints;
     protected float enemyHealth;
-    protected float aimingSpeed;
+    protected float turningSpeed;
+    protected float firingSpeed;
+    protected float projectileSpeed;
+    protected GameObject projectile;
     private int scoreValue;
 
     // When the enemy is spawned, pull all the settings from the WaveConfigurator for the current wave
@@ -20,7 +23,10 @@ public class Enemy : MonoBehaviour
         waypoints = waveConfigurator.GetWaypoints();
         transform.position = waypoints[0].transform.position;
         enemyHealth = waveConfigurator.GetEnemyHealth();
-        aimingSpeed = waveConfigurator.GetEnemyAimingSpeed();
+        turningSpeed = waveConfigurator.GetEnemyTurningSpeed();
+        firingSpeed = waveConfigurator.GetEnemyFiringSpeed();
+        projectileSpeed = waveConfigurator.GetEnemyProjectileSpeed();
+        projectile = waveConfigurator.GetEnemyProjectilePrefab();
         scoreValue = waveConfigurator.GetEnemyScoreValue();
         playerObject = GameObject.Find("Player").gameObject;
         gameSession = GameObject.Find("GameSession").gameObject.GetComponent<GameSession>();

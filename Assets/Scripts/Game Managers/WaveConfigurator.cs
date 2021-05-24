@@ -8,6 +8,7 @@ public class WaveConfigurator : ScriptableObject
     // This is what we'll use to configue waves in the Unity Editor, 
     // We won't have to programatically configure them now we have this
     [SerializeField] GameObject enemyPrefab;
+    [SerializeField] GameObject enemyProjectilePrefab;
     [SerializeField] GameObject pathPrefab;
 
     [Header("Wave Config")]
@@ -18,8 +19,10 @@ public class WaveConfigurator : ScriptableObject
 
     [Header("Enemy Stats")]
     [SerializeField] float enemyHealth;
-    [SerializeField] float enemyAimingSpeed;
+    [SerializeField] float enemyTurningSpeed;
     [SerializeField] float enemyMovementSpeed;
+    [SerializeField] float enemyFiringSpeed;
+    [SerializeField] float enemyProjectileSpeed;
     [SerializeField] int enemyScoreValue;
 
     public GameObject GetEnemyPrefab() {return enemyPrefab;}
@@ -40,6 +43,9 @@ public class WaveConfigurator : ScriptableObject
     public bool GetDoubleWave() {return doubleWave;}
     public float GetStaggerTime() {return staggerTime;}
     public float GetEnemyHealth() {return enemyHealth;}
-    public float GetEnemyAimingSpeed() {return enemyAimingSpeed;}
+    public float GetEnemyTurningSpeed() {return enemyTurningSpeed;}
+    public GameObject GetEnemyProjectilePrefab() {return enemyProjectilePrefab;}
+    public float GetEnemyFiringSpeed() {return enemyFiringSpeed;}
+    public float GetEnemyProjectileSpeed() {return enemyProjectileSpeed;}
     public int GetEnemyScoreValue() {return enemyScoreValue;}
 }
