@@ -6,6 +6,7 @@ public class EnemyPathing : Enemy
 {
     // This is our base class for enemy movement,
     // all our other movement subclasses will derive from this
+    protected bool reverse = false;
     protected float dirOfTravel;
     protected float movementThisFrame;
     private Quaternion desiredRotation;

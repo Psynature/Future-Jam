@@ -32,7 +32,7 @@ public class Enemy : MonoBehaviour
         gameSession = GameObject.Find("GameSession").gameObject.GetComponent<GameSession>();
     }
     //This is called when the enemy collides with another object
-    protected void OnTriggerEnter2D(Collider2D other)
+    protected virtual void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {       

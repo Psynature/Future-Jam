@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62893520b23559c459c5161215aa1b13, type: 3}
-  m_Name: Wave 1
+  m_Name: Wave 5
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 8508375062667540846, guid: 88005a4ae39811240bb105b5bb829379,
+  enemyPrefab: {fileID: 8508375062667540846, guid: 4d91a09270dcd8f43b74b239fc2f6338,
     type: 3}
   enemyProjectilePrefab: {fileID: 0}
-  pathPrefab: {fileID: 6760382164335102614, guid: fc174b32f1b312f4182545d20f89c33e,
+  pathPrefab: {fileID: 6760382164335102614, guid: d99819edbca130a439927de426113d05,
     type: 3}
-  timeBetweenSpawns: 1
-  numberOfEnemies: 10
+  timeBetweenSpawns: 3
+  numberOfEnemies: 2
   doubleWave: 0
   staggerTime: 0
-  enemyHealth: 10
-  enemyTurningSpeed: 10
-  enemyMovementSpeed: 10
+  enemyHealth: 0
+  enemyTurningSpeed: 0
+  enemyMovementSpeed: 3
   enemyFiringSpeed: 0
   enemyProjectileSpeed: 0
   enemyScoreValue: 10

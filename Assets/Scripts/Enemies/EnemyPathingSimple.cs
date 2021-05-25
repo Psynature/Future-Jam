@@ -16,16 +16,37 @@ public class EnemyPathingSimple : EnemyPathing
 
     private void SimpleMovement()
     {
-        if (waypointIndex < waypoints.Count)
+        if(!reverse)
         {
-            var targetPosition = waypoints[waypointIndex].transform.position;
-            transform.position = Vector2.MoveTowards(transform.position, targetPosition, movementThisFrame);
-            if (transform.position == targetPosition)
+            if (waypointIndex < waypoints.Count)
             {
-                waypointIndex++;
+                var targetPosition = waypoints[waypointIndex].transform.position;
+                transform.position = Vector2.MoveTowards(transform.position, targetPosition, movementThisFrame);
+                if (transform.position == targetPosition)
+                {
+                    waypointIndex++;
+                }
+            }
+            else
+            {
+                reverse = true;
             }
         }
         else
-            EnemyCompletedWave();
-    }
+        {
+            if(waypointIndex > 0 )
+            {
+                var targetPosition = waypoints[waypointIndex - 1].transform.position;
+                transform.position = Vector2.MoveTowards(transform.position, targetPosition, movementThisFrame);
+                if (transform.position == targetPosition)
+                {
+                    waypointIndex--;
+                }
+            }
+            else
+            {
+                reverse = false;
+            }
+            }
+        }
 }
