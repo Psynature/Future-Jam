@@ -7,6 +7,7 @@ public class PlayerWeapon : Player
     CustomFixedUpdate customFixedUpdate;
     [SerializeField] protected float projectileSpeed;
     [SerializeField] protected float projectileFiringPeriod = 0.2f;
+    [SerializeField] protected int projectileDamage = 10;
     [SerializeField] protected float aimingSpeed = 10;
 
     [SerializeField] GameObject projectilePrefab;
@@ -46,6 +47,7 @@ public class PlayerWeapon : Player
             weaponPosition.position,
             transform.rotation)
             as GameObject;
+        projectile.GetComponent<DamageDealer>().SetDamage(projectileDamage);
     }
 
     void AddForceToProjectile(GameObject projectile)

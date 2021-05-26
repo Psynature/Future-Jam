@@ -32,8 +32,17 @@ public class Enemy : MonoBehaviour
         gameSession = GameObject.Find("GameSession").gameObject.GetComponent<GameSession>();
     }
     //This is called when the enemy collides with another object
-    protected virtual void OnTriggerEnter2D(Collider2D other)
+    protected void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.gameObject.tag == "Player Projectile")
+        {
+            Debug.Log("Hit");
+            enemyHealth -= other.gameObject.GetComponent<DamageDealer>().damageDealt;
+            if (enemyHealth <= 0)
+            {
+                DestroyObject(scoreValue);
+            }
+        }
         if (other.gameObject.tag == "Player")
         {       
             scoreValue /= 4;

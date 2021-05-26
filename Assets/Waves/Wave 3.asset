@@ -21,7 +21,7 @@ MonoBehaviour:
   numberOfEnemies: 10
   doubleWave: 0
   staggerTime: 0
-  enemyHealth: 0
+  enemyHealth: 10
   enemyTurningSpeed: 5000
   enemyMovementSpeed: 10
   enemyFiringSpeed: 0
