@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,7 +14,7 @@ public class EnemyPathingQuadratic : EnemyPathing
     }
     private void QuadraticMove()
     {
-        if(!reverse)
+        if (!reverse)
         {
             if (count < 1.0f)
             {
@@ -32,7 +32,7 @@ public class EnemyPathingQuadratic : EnemyPathing
                 reverse = true;
             }
         }
-        if(reverse)
+        if (reverse)
         {
             if (count < 1.0f)
             {

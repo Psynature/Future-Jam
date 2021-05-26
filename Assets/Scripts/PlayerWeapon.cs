@@ -4,11 +4,54 @@ using UnityEngine;
 
 public class PlayerWeapon : Player
 {
-    protected float aimingSpeed = 10;
+    CustomFixedUpdate customFixedUpdate;
+    [SerializeField] protected float projectileSpeed;
+    [SerializeField] protected float projectileFiringPeriod = 0.2f;
+    [SerializeField] protected float aimingSpeed = 10;
+
+    [SerializeField] GameObject projectilePrefab;
+    [SerializeField] Transform weaponPosition;
+     
+    void Start ()
+    {
+        customFixedUpdate = new CustomFixedUpdate(projectileFiringPeriod, OnFixedUpdate);
+    }
+
     // Update is called once per frame
     void Update()
     {
         LookAtCrosshair();
+        customFixedUpdate.Update();
+    }
+
+    void OnFixedUpdate(float dt)
+    {
+        FireWeapon();
+    }
+
+    void FireWeapon()
+    {
+        if (Input.GetButton("Fire1"))
+        {
+            GameObject projectile;
+            InstantiateProjectile(out projectile);
+            AddForceToProjectile(projectile);
+        }
+    }
+
+    void InstantiateProjectile(out GameObject projectile)
+    {
+        projectile = Instantiate(
+            projectilePrefab,
+            weaponPosition.position,
+            transform.rotation)
+            as GameObject;
+    }
+
+    void AddForceToProjectile(GameObject projectile)
+    {
+        projectile.GetComponent<Rigidbody2D>().AddForce(
+            -weaponPosition.up * projectileSpeed);
     }
 
     private void LookAtCrosshair()
