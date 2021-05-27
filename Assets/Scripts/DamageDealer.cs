@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class DamageDealer : MonoBehaviour
 {
-    public int damageDealt;
+    private int damageDealt;
 
     public void SetDamage(int damage) {damageDealt = damage;}
+
+    public int GetDamage() {return damageDealt;}
 }

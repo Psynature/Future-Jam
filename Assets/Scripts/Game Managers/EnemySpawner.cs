@@ -16,11 +16,12 @@ public class EnemySpawner : MonoBehaviour
 
     private IEnumerator SpawnAllWavesInLevel()
     {
-        for (int waveIndex = startingWave; waveIndex < waveConfigurators.Count ; waveIndex++)
+        for (int waveIndex = startingWave; waveIndex < waveConfigurators.Count; waveIndex++)
         {
             var currentWave = waveConfigurators[waveIndex];
             if (currentWave.GetDoubleWave() == true)
             {
+                StartCoroutine(SpawnAllEnemiesInWave(currentWave));
                 yield return new WaitForSeconds(currentWave.GetStaggerTime());
                 waveIndex++;
                 currentWave = waveConfigurators[waveIndex];

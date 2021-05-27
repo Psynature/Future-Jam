@@ -12,6 +12,8 @@ public class Enemy : MonoBehaviour
     protected float enemyHealth;
     protected float turningSpeed;
     protected float firingSpeed;
+    protected bool enemyIsAimer;
+    protected float aimingSpeed;
     protected float projectileSpeed;
     protected GameObject projectile;
     private int scoreValue;
@@ -25,6 +27,8 @@ public class Enemy : MonoBehaviour
         enemyHealth = waveConfigurator.GetEnemyHealth();
         turningSpeed = waveConfigurator.GetEnemyTurningSpeed();
         firingSpeed = waveConfigurator.GetEnemyFiringSpeed();
+        enemyIsAimer = waveConfigurator.GetEnemyAimer();
+        aimingSpeed = waveConfigurator.GetEnemyAimingSpeed();
         projectileSpeed = waveConfigurator.GetEnemyProjectileSpeed();
         projectile = waveConfigurator.GetEnemyProjectilePrefab();
         scoreValue = waveConfigurator.GetEnemyScoreValue();
@@ -37,7 +41,7 @@ public class Enemy : MonoBehaviour
         if (other.gameObject.tag == "Player Projectile")
         {
             Debug.Log("Hit");
-            enemyHealth -= other.gameObject.GetComponent<DamageDealer>().damageDealt;
+            enemyHealth -= other.gameObject.GetComponent<DamageDealer>().GetDamage();
             if (enemyHealth <= 0)
             {
                 DestroyObject(scoreValue);
