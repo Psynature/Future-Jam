@@ -699,7 +699,7 @@ PrefabInstance:
         type: 3}
       propertyPath: waveConfigurators.Array.data[0]
       value: 
-      objectReference: {fileID: 11400000, guid: f97204e01bf37df4cb3bc45e19b4ab27,
+      objectReference: {fileID: 11400000, guid: 610fbbc03c600fe48936286831281a6a,
         type: 2}
     - target: {fileID: 672992102246152228, guid: 40d95b38bf4b2014d99e56d16e467edb,
         type: 3}

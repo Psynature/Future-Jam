@@ -23,8 +23,8 @@ MonoBehaviour:
   doubleWave: 0
   staggerTime: 0
   enemyHealth: 0
-  enemyTurningSpeed: 0
-  enemyMovementSpeed: 3
+  enemyTurningSpeed: 40
+  enemyMovementSpeed: 1
   enemyScoreValue: 10
   enemyFiringSpeed: 1
   enemyProjectileSpeed: 80
