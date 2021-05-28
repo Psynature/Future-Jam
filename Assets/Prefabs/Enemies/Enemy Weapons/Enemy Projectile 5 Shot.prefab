@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 6676589326946525048}
   m_Layer: 0
   m_Name: Enemy Projectile Basic (1)
-  m_TagString: Untagged
+  m_TagString: Enemy Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,7 +146,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!114 &6676589326946525048
 MonoBehaviour:
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 3945725076925816119}
   m_Layer: 0
   m_Name: Enemy Projectile Basic (4)
-  m_TagString: Untagged
+  m_TagString: Enemy Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -306,7 +306,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!114 &3945725076925816119
 MonoBehaviour:
@@ -337,7 +337,7 @@ GameObject:
   - component: {fileID: 6998283975397746326}
   m_Layer: 0
   m_Name: Enemy Projectile Basic (3)
-  m_TagString: Untagged
+  m_TagString: Enemy Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -466,7 +466,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!114 &6998283975397746326
 MonoBehaviour:
@@ -497,7 +497,7 @@ GameObject:
   - component: {fileID: 638446918394447982}
   m_Layer: 0
   m_Name: Enemy Projectile Basic (2)
-  m_TagString: Untagged
+  m_TagString: Enemy Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -626,7 +626,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!114 &638446918394447982
 MonoBehaviour:
@@ -657,7 +657,7 @@ GameObject:
   - component: {fileID: 86297198646882682}
   m_Layer: 0
   m_Name: Enemy Projectile Basic
-  m_TagString: Untagged
+  m_TagString: Enemy Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -786,7 +786,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!114 &86297198646882682
 MonoBehaviour:

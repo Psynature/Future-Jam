@@ -5,9 +5,9 @@ using TMPro;
 
 public class GameSession : MonoBehaviour
 {
-    private int score = 0;
+    private int score, playerHealth;
 
-    [SerializeField] private TMP_Text scoreText;
+    [SerializeField] private TMP_Text scoreText, healthText;
 
     void Awake()
     {
@@ -16,8 +16,10 @@ public class GameSession : MonoBehaviour
     void Start()
     {
         score = 0;
-        UpdateScore(0);
-        Cursor.lockState = CursorLockMode.Confined;
+        UpdateScore(score);
+        playerHealth = 100;
+        UpdateHealth(0);
+   //     Cursor.lockState = CursorLockMode.Confined;
     }
     void Update()
     {
@@ -27,5 +29,12 @@ public class GameSession : MonoBehaviour
     {
         score += value;
         scoreText.text = score.ToString();
+    }
+    
+    public void UpdateHealth(int value)
+    {
+        Debug.Log(value);
+        playerHealth -= value;
+        healthText.text = playerHealth.ToString();
     }
 }

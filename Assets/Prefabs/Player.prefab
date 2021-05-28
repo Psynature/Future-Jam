@@ -97,6 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileSpeed: 1000
   projectileFiringPeriod: 0.2
+  projectileDamage: 10
   aimingSpeed: 10
   projectilePrefab: {fileID: 3845823154133121155, guid: 779fce501b3e1b5498b909b0ecd51ac5,
     type: 3}
@@ -141,6 +142,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3532618753469356830}
   - component: {fileID: 3532618753469356831}
+  - component: {fileID: 3064438783163509999}
   - component: {fileID: 3532618753469356825}
   - component: {fileID: 3532618753469356824}
   - component: {fileID: 1681046710}
@@ -180,6 +182,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 10000
   playerPadding: 2
+--- !u!114 &3064438783163509999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3532618753469356828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 908b455b3b1dba04eab346e2b348ff31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!50 &3532618753469356825
 Rigidbody2D:
   serializedVersion: 4

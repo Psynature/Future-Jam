@@ -10,11 +10,11 @@ public class Enemy : MonoBehaviour
     protected WaveConfigurator waveConfigurator;
     protected List<Transform> waypoints;
     protected float enemyHealth;
+    protected int collisionDamage;
     protected float turningSpeed;
     protected float firingSpeed;
     protected bool enemyIsAimer;
     protected int projectileDamage;
-    protected int isAiming;
     protected float aimingSpeed;
     protected float projectileSpeed;
     protected GameObject projectilePrefab;
@@ -27,6 +27,7 @@ public class Enemy : MonoBehaviour
         waypoints = waveConfigurator.GetWaypoints();
         transform.position = waypoints[0].transform.position;
         enemyHealth = waveConfigurator.GetEnemyHealth();
+        collisionDamage = waveConfigurator.GetEnemyCollisionDamage();
         turningSpeed = waveConfigurator.GetEnemyTurningSpeed();
         firingSpeed = waveConfigurator.GetEnemyFiringSpeed();
         enemyIsAimer = waveConfigurator.GetEnemyAimer();
@@ -38,15 +39,7 @@ public class Enemy : MonoBehaviour
         playerObject = GameObject.Find("Player").gameObject;
         gameSession = GameObject.Find("GameSession").gameObject.GetComponent<GameSession>();
         GetComponentInChildren<EnemyWeapon>().SetEnemyWeapon(waveConfig);
-    }
-
-    void Update()
-    {
-        if (enemyIsAimer)
-            isAiming = 1;
-        else
-            isAiming = 0;
-        Debug.Log(isAiming);
+        GetComponent<DamageDealer>().SetDamage(collisionDamage);
     }
 
     //This is called when the enemy collides with another object
@@ -61,11 +54,6 @@ public class Enemy : MonoBehaviour
                 DestroyObject(scoreValue);
             }
             Destroy(other.gameObject);
-        }
-        if (other.gameObject.tag == "Player")
-        {       
-            scoreValue /= 4;
-            DestroyObject(scoreValue);
         }
     }
     protected void DestroyObject(int scoreValue)
