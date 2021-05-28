@@ -6,9 +6,6 @@ public class Boundary : MonoBehaviour
 {
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Projectile")
-        {
-            Destroy(other.gameObject);
-        }
+        Destroy(other.gameObject);
     }
 }

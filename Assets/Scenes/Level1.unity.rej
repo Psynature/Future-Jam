@@ -1,0 +1,10 @@
+diff a/Assets/Scenes/Level1.unity b/Assets/Scenes/Level1.unity	(rejected hunks)
+@@ -211,7 +211,7 @@
+   m_LocalPosition: {x: 0, y: 0, z: 0}
+   m_LocalScale: {x: 0, y: 0, z: 0}
+   m_Children:
+-  - {fileID: 75544465}
++  - {fileID: 238154217}
+   m_Father: {fileID: 0}
+   m_RootOrder: 4
+   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
