@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 8508375062667540846, guid: 4d91a09270dcd8f43b74b239fc2f6338,
     type: 3}
-  enemyProjectilePrefab: {fileID: 0}
+  enemyProjectilePrefab: {fileID: 2211766062288918589, guid: 581e17f6ca8c05747bd92af94881f0e9,
+    type: 3}
   pathPrefab: {fileID: 6760382164335102614, guid: d99819edbca130a439927de426113d05,
     type: 3}
   timeBetweenSpawns: 3
@@ -24,6 +25,9 @@ MonoBehaviour:
   enemyHealth: 0
   enemyTurningSpeed: 0
   enemyMovementSpeed: 3
-  enemyFiringSpeed: 0
-  enemyProjectileSpeed: 0
   enemyScoreValue: 10
+  enemyFiringSpeed: 1
+  enemyProjectileSpeed: 80
+  enemyProjectileDamage: 10
+  enemyIsAimer: 0
+  enemyAimingSpeed: 0

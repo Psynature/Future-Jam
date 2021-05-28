@@ -12,20 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62893520b23559c459c5161215aa1b13, type: 3}
   m_Name: Wave 2
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 8508375062667540846, guid: 88005a4ae39811240bb105b5bb829379,
+  enemyPrefab: {fileID: 8508375062667540846, guid: 1490da2e5a87df645af3b8ec93e306a7,
     type: 3}
-  enemyProjectilePrefab: {fileID: 0}
-  pathPrefab: {fileID: 6760382164335102614, guid: fc174b32f1b312f4182545d20f89c33e,
+  enemyProjectilePrefab: {fileID: 7497984001429415707, guid: 7e3dab6689d647a49965b022c12c9147,
+    type: 3}
+  pathPrefab: {fileID: 6760382164335102614, guid: 5a72d31c245fe914580e30f601a1efa0,
     type: 3}
   timeBetweenSpawns: 1
-  numberOfEnemies: 10
+  numberOfEnemies: 5
   doubleWave: 0
   staggerTime: 0
   enemyHealth: 0
   enemyTurningSpeed: 0
   enemyMovementSpeed: 10
-  enemyFiringSpeed: 0
+  enemyScoreValue: 10
+  enemyFiringSpeed: 1
+  enemyProjectileSpeed: 100
+  enemyProjectileDamage: 10
   enemyIsAimer: 0
   enemyAimingSpeed: 10
-  enemyProjectileSpeed: 0
-  enemyScoreValue: 10

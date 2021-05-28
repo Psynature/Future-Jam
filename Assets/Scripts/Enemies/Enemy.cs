@@ -13,9 +13,11 @@ public class Enemy : MonoBehaviour
     protected float turningSpeed;
     protected float firingSpeed;
     protected bool enemyIsAimer;
+    protected int projectileDamage;
+    protected int isAiming;
     protected float aimingSpeed;
     protected float projectileSpeed;
-    protected GameObject projectile;
+    protected GameObject projectilePrefab;
     private int scoreValue;
 
     // When the enemy is spawned, pull all the settings from the WaveConfigurator for the current wave
@@ -30,11 +32,23 @@ public class Enemy : MonoBehaviour
         enemyIsAimer = waveConfigurator.GetEnemyAimer();
         aimingSpeed = waveConfigurator.GetEnemyAimingSpeed();
         projectileSpeed = waveConfigurator.GetEnemyProjectileSpeed();
-        projectile = waveConfigurator.GetEnemyProjectilePrefab();
+        projectileDamage = waveConfigurator.GetEnemyProjectileDamage();
+        projectilePrefab = waveConfigurator.GetEnemyProjectilePrefab();
         scoreValue = waveConfigurator.GetEnemyScoreValue();
         playerObject = GameObject.Find("Player").gameObject;
         gameSession = GameObject.Find("GameSession").gameObject.GetComponent<GameSession>();
+        GetComponentInChildren<EnemyWeapon>().SetEnemyWeapon(waveConfig);
     }
+
+    void Update()
+    {
+        if (enemyIsAimer)
+            isAiming = 1;
+        else
+            isAiming = 0;
+        Debug.Log(isAiming);
+    }
+
     //This is called when the enemy collides with another object
     protected void OnTriggerEnter2D(Collider2D other)
     {
@@ -46,6 +60,7 @@ public class Enemy : MonoBehaviour
             {
                 DestroyObject(scoreValue);
             }
+            Destroy(other.gameObject);
         }
         if (other.gameObject.tag == "Player")
         {       

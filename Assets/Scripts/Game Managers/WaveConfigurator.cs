@@ -21,11 +21,14 @@ public class WaveConfigurator : ScriptableObject
     [SerializeField] float enemyHealth;
     [SerializeField] float enemyTurningSpeed;
     [SerializeField] float enemyMovementSpeed;
+    [SerializeField] int enemyScoreValue;
+    [Header("Enemy Weapon Info")]
     [SerializeField] float enemyFiringSpeed;
+    [SerializeField] float enemyProjectileSpeed;
+    [SerializeField] int enemyProjectileDamage;
     [SerializeField] bool enemyIsAimer;
     [SerializeField] float enemyAimingSpeed;
-    [SerializeField] float enemyProjectileSpeed;
-    [SerializeField] int enemyScoreValue;
+
 
     public GameObject GetEnemyPrefab() {return enemyPrefab;}
 
@@ -51,5 +54,6 @@ public class WaveConfigurator : ScriptableObject
     public bool GetEnemyAimer() {return enemyIsAimer;}
     public float GetEnemyAimingSpeed() {return enemyAimingSpeed;}
     public float GetEnemyProjectileSpeed() {return enemyProjectileSpeed;}
+    public int GetEnemyProjectileDamage() {return enemyProjectileDamage;}
     public int GetEnemyScoreValue() {return enemyScoreValue;}
 }

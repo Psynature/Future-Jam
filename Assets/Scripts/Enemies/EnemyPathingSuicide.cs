@@ -25,6 +25,6 @@ public class EnemyPathingSuicide : EnemyPathing
         // Rotate towards the target using aimingSpeed (singleStep)
         transform.rotation = Quaternion.Slerp(transform.rotation, desiredRotation, singleStep);
         // Move forward at a constant rate
-        transform.Translate(Vector3.down * movementThisFrame);
+        transform.Translate(-Vector3.up * movementThisFrame);
     }
 }
