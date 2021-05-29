@@ -63,6 +63,6 @@ public class PlayerMovement : Player
         xMin = gameCamera.ViewportToWorldPoint(new Vector3(0,0,0)).x + (playerSize.x);
         xMax = gameCamera.ViewportToWorldPoint(new Vector3(1,0,0)).x - (playerSize.x);
         yMin = gameCamera.ViewportToWorldPoint(new Vector3(0,0,0)).y + (playerSize.y);
-        yMax = gameCamera.ViewportToWorldPoint(new Vector3(0,1,0)).y - (playerSize.y);
+        yMax = gameCamera.ViewportToWorldPoint(new Vector3(0,0.91f,0)).y - (playerSize.y);
     }
 }

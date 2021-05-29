@@ -25,6 +25,7 @@ MonoBehaviour:
   enemyHealth: 10
   enemyTurningSpeed: 10
   enemyMovementSpeed: 10
+  enemyCollisionDamage: 10
   enemyScoreValue: 10
   enemyFiringSpeed: 1
   enemyProjectileSpeed: 100

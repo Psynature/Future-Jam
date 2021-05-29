@@ -25,9 +25,10 @@ MonoBehaviour:
   enemyHealth: 0
   enemyTurningSpeed: 0
   enemyMovementSpeed: 10
+  enemyCollisionDamage: 0
   enemyScoreValue: 10
   enemyFiringSpeed: 1
   enemyProjectileSpeed: 100
   enemyProjectileDamage: 10
-  enemyIsAimer: 0
+  enemyIsAimer: 1
   enemyAimingSpeed: 10
