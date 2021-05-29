@@ -6,6 +6,11 @@ public class EnemyProjectileMovement : MonoBehaviour
 {
     float projectileSpeed;
     Rigidbody2D rb;
+
+    void Start()
+    {
+        transform.parent = null;
+    }
     public void SetProjectileSpeed(float speed)
     {
         rb = gameObject.GetComponent<Rigidbody2D>();

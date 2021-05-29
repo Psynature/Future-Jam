@@ -14,7 +14,15 @@ public class PlayerHealth : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.tag == "Enemy Projectile" || other.gameObject.tag == "Enemy")
+        if (Input.GetButton("Fire2") && other.gameObject.tag == "Enemy Projectile")
+        {
+           var rb = other.gameObject.GetComponent<Rigidbody2D>();
+           float v = rb.velocity.magnitude;
+           Debug.Log(v);
+           rb.AddRelativeForce(Vector2.up * (v * 100));
+           other.gameObject.tag = "Player Projectile";
+        }
+        else if(other.gameObject.tag == "Enemy Projectile" || other.gameObject.tag == "Enemy")
         {
             ReduceHealth(other.gameObject.GetComponent<DamageDealer>().GetDamage());
             Destroy(other.gameObject);
