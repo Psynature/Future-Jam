@@ -47,7 +47,6 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.tag == "Player Projectile")
         {
-            Debug.Log("Hit");
             enemyHealth -= other.gameObject.GetComponent<DamageDealer>().GetDamage();
             if (enemyHealth <= 0)
             {

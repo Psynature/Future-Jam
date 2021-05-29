@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 0}
+  healthText: {fileID: 0}
+  deflectionText: {fileID: 0}
 --- !u!222 &1778355385525625053
 CanvasRenderer:
   m_ObjectHideFlags: 0

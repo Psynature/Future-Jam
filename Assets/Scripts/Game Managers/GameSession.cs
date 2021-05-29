@@ -9,7 +9,9 @@ public class GameSession : MonoBehaviour
     private int score, playerHealth;
     private float maxHealth;
 
-    [SerializeField] private TMP_Text scoreText, healthText;
+    private float maxDeflectionTime;
+
+    [SerializeField] private TMP_Text scoreText, healthText, deflectionText;
 
     void Awake()
     {
@@ -22,12 +24,10 @@ public class GameSession : MonoBehaviour
         playerHealth = 1000;
         maxHealth = 1000;
         UpdateHealth(0);
+        //re-enable me on submission
    //     Cursor.lockState = CursorLockMode.Confined;
     }
-    void Update()
-    {
 
-    }
     public void UpdateScore(int value)
     {
         score += value;
@@ -41,6 +41,25 @@ public class GameSession : MonoBehaviour
         SetTextColourGradient(doColor, healthText.GetComponent<TMP_Text>());
         var calculatePercentage = (playerHealth / maxHealth) * 100;
         healthText.text = "Health: " + calculatePercentage.ToString() + "%";
+    }
+
+    public void SetMaxDeflectionTime(float value)
+    {
+        maxDeflectionTime = value;
+        SetDeflectorColour(1);
+        deflectionText.text = maxDeflectionTime.ToString("F2");
+    }
+
+    public void UpdateDeflector(float value)
+    {
+        float doColor = value / maxDeflectionTime;
+        deflectionText.text = value.ToString("F2");
+        SetDeflectorColour(doColor);
+    }
+
+    private void SetDeflectorColour(float doColor)
+    {
+        SetTextColourGradient(doColor, deflectionText.GetComponent<TMP_Text>());
     }
 
     private void SetTextColourGradient(float value, TMP_Text text)

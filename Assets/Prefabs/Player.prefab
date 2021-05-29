@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpeed: 1000
-  projectileFiringPeriod: 0.2
+  projectileFiringPeriod: 0.1
   projectileDamage: 10
   aimingSpeed: 10
   projectilePrefab: {fileID: 3845823154133121155, guid: 779fce501b3e1b5498b909b0ecd51ac5,
@@ -194,7 +194,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908b455b3b1dba04eab346e2b348ff31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  playerHealth: 100
+  maxPlayerDeflectionTime: 5
 --- !u!50 &3532618753469356825
 Rigidbody2D:
   serializedVersion: 4
@@ -273,10 +274,10 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3532618753469356828}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
