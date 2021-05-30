@@ -6,6 +6,7 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private int playerHealth = 100;
     [SerializeField] private float maxPlayerDeflectionTime;
+    [SerializeField] private List<Sprite> enemyProjectileSprites;
 
     private float deflectionTimeRemaining;
     private bool usingDeflector = false;
@@ -18,14 +19,16 @@ public class PlayerHealth : MonoBehaviour
         gameSession = GameObject.Find("GameSession").gameObject.GetComponent<GameSession>();
         gameSession.SetMaxDeflectionTime(maxPlayerDeflectionTime);
     }
+    void Update()
+    {
+        CheckUsingDeflector();
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (usingDeflector && other.gameObject.tag == "Enemy Projectile")
         {
-           var rb = other.gameObject.GetComponent<Rigidbody2D>();
-           float v = rb.velocity.magnitude;
-           rb.AddRelativeForce(Vector2.up * (v * 100));
-           other.gameObject.tag = "Player Projectile";
+            DeflectShot(other);
         }
         else if(other.gameObject.tag == "Enemy Projectile" || other.gameObject.tag == "Enemy")
         {
@@ -34,15 +37,31 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    private void ReduceHealth(int damageDealt)
+    private void DeflectShot(Collider2D other)
+    {
+        var rb = other.gameObject.GetComponent<Rigidbody2D>();
+        float v = rb.velocity.magnitude;
+        rb.AddRelativeForce(Vector2.up * (v * 100));
+        other.gameObject.tag = "Player Projectile";
+        DeflectedShotSpriteSwap(other.gameObject.GetComponent<SpriteRenderer>().sprite.name, other.gameObject);
+    }
+
+    private void DeflectedShotSpriteSwap(string name, GameObject other)
+    {
+        Debug.Log(name);
+        for (int i = 0; i < enemyProjectileSprites.Count; i++)
+        {
+            if(name == enemyProjectileSprites[i].name)
+            {
+                other.gameObject.GetComponent<SpriteRenderer>().sprite = enemyProjectileSprites[i + 1];
+            }
+        }
+    }
+
+    public void ReduceHealth(int damageDealt)
     {
         playerHealth -= damageDealt;
         gameSession.UpdateHealth(damageDealt);
-    }
-
-    void Update()
-    {
-        CheckUsingDeflector();
     }
 
     private void CheckUsingDeflector()

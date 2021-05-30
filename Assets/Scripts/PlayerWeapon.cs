@@ -53,7 +53,7 @@ public class PlayerWeapon : Player
     void AddForceToProjectile(GameObject projectile)
     {
         projectile.GetComponent<Rigidbody2D>().AddForce(
-            -weaponPosition.up * projectileSpeed);
+            weaponPosition.up * projectileSpeed);
     }
 
     private void LookAtCrosshair()
@@ -61,7 +61,7 @@ public class PlayerWeapon : Player
         var target = Input.mousePosition;
         var pos = Camera.main.WorldToScreenPoint(transform.position);
         target -= pos;
-        var angle = (Mathf.Atan2(target.y, target.x) * Mathf.Rad2Deg + 90);
+        var angle = (Mathf.Atan2(target.y, target.x) * Mathf.Rad2Deg - 90);
         var desiredRotation = Quaternion.AngleAxis(angle, Vector3.forward);
         transform.rotation = Quaternion.Slerp(transform.rotation, desiredRotation, aimingSpeed * Time.deltaTime);
     }

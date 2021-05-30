@@ -12,6 +12,7 @@ public class GameSession : MonoBehaviour
     private float maxDeflectionTime;
 
     [SerializeField] private TMP_Text scoreText, healthText, deflectionText;
+    [SerializeField] private Texture2D crosshair;
 
     void Awake()
     {
@@ -24,6 +25,7 @@ public class GameSession : MonoBehaviour
         playerHealth = 1000;
         maxHealth = 1000;
         UpdateHealth(0);
+        Cursor.SetCursor(crosshair, new Vector2(crosshair.width / 2, crosshair.height / 2), CursorMode.Auto);
         //re-enable me on submission
    //     Cursor.lockState = CursorLockMode.Confined;
     }
@@ -40,7 +42,7 @@ public class GameSession : MonoBehaviour
         float doColor = playerHealth / maxHealth; 
         SetTextColourGradient(doColor, healthText.GetComponent<TMP_Text>());
         var calculatePercentage = (playerHealth / maxHealth) * 100;
-        healthText.text = "Health: " + calculatePercentage.ToString() + "%";
+        healthText.text = "Hull Integrity: " + calculatePercentage.ToString() + "%";
     }
 
     public void SetMaxDeflectionTime(float value)
