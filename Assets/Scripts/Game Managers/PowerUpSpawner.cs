@@ -41,6 +41,6 @@ public class PowerUpSpawner : MonoBehaviour
     }
     private void AddForceToPowerup(GameObject spawnedItem)
     {
-        spawnedItem.GetComponent<Rigidbody2D>().AddForce(Vector3.down * (Mathf.Min(1, powerupSpeed) * 10));
+        spawnedItem.GetComponent<Rigidbody2D>().AddForce(Vector3.down * (Mathf.Max(1, powerupSpeed) * 10));
     }
 }
