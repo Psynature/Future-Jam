@@ -26,7 +26,7 @@ SpriteAtlas:
       m_MaxTextureSize: 8192
       m_ResizeAlgorithm: 0
       m_TextureFormat: -1
-      m_TextureCompression: 2
+      m_TextureCompression: 0
       m_CompressionQuality: 50
       m_CrunchedCompression: 0
       m_AllowsAlphaSplitting: 0
@@ -45,13 +45,25 @@ SpriteAtlas:
     - {fileID: 21300000, guid: aded9cbfb61d39a449775f5e5f753b72, type: 3}
     - {fileID: 21300000, guid: 7a901bf93a34c764f97071ab6bf2e43f, type: 3}
     - {fileID: 21300000, guid: 78d897cb5a07aac489a1f505a84621e0, type: 3}
+    - {fileID: 21300000, guid: fdf5dfc95c176d54faafa4950b9fc17b, type: 3}
+    - {fileID: 21300000, guid: 9d4ba25764b37f9438d2e1b334f111ae, type: 3}
+    - {fileID: 21300000, guid: 4dde6a67d4ef87e4c8e330bc562ec3f8, type: 3}
+    - {fileID: 21300000, guid: a4acf1d0d6bdcbc47b6fbe2012337708, type: 3}
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: a4acf1d0d6bdcbc47b6fbe2012337708, type: 3}
+  - {fileID: 21300000, guid: 9d4ba25764b37f9438d2e1b334f111ae, type: 3}
+  - {fileID: 21300000, guid: 4dde6a67d4ef87e4c8e330bc562ec3f8, type: 3}
+  - {fileID: 21300000, guid: fdf5dfc95c176d54faafa4950b9fc17b, type: 3}
   - {fileID: 21300000, guid: 7a901bf93a34c764f97071ab6bf2e43f, type: 3}
   - {fileID: 21300000, guid: 78d897cb5a07aac489a1f505a84621e0, type: 3}
   - {fileID: 21300000, guid: aded9cbfb61d39a449775f5e5f753b72, type: 3}
   m_PackedSpriteNamesToIndex:
+  - star_tiny
+  - star_medium
+  - star_small
+  - star_large
   - star2
   - star3
   - star1
