@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62893520b23559c459c5161215aa1b13, type: 3}
+  m_Name: Lv1W5P1
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 8508375062667540846, guid: 88005a4ae39811240bb105b5bb829379,
+    type: 3}
+  enemyProjectilePrefab: {fileID: 8236357339649165130, guid: 4fa7136101bb24f48ac805589239b91f,
+    type: 3}
+  pathPrefab: {fileID: 6760382164335102614, guid: f1cf9146df419c74c9f60d07c8c88c66,
+    type: 3}
+  timeBetweenSpawns: 1
+  numberOfEnemies: 10
+  doubleWave: 1
+  staggerTime: 0
+  enemyHealth: 10
+  enemyTurningSpeed: 10
+  enemyMovementSpeed: 10
+  enemyCollisionDamage: 10
+  enemyScoreValue: 10
+  enemyFiringSpeed: 1
+  enemyProjectileSpeed: 100
+  enemyProjectileDamage: 10
+  enemyIsAimer: 1
+  enemyAimingSpeed: 10
