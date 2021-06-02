@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62893520b23559c459c5161215aa1b13, type: 3}
   m_Name: Lv1W2P3
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 8508375062667540846, guid: 88005a4ae39811240bb105b5bb829379,
+  enemyPrefab: {fileID: 8508375062667540846, guid: 4d91a09270dcd8f43b74b239fc2f6338,
     type: 3}
   enemyProjectilePrefab: {fileID: 8236357339649165130, guid: 4fa7136101bb24f48ac805589239b91f,
     type: 3}

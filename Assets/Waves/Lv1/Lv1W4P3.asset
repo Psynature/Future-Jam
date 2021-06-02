@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62893520b23559c459c5161215aa1b13, type: 3}
-  m_Name: Lv1W2P2
+  m_Name: Lv1W4P3
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 8508375062667540846, guid: 4d91a09270dcd8f43b74b239fc2f6338,
     type: 3}
@@ -20,8 +20,8 @@ MonoBehaviour:
     type: 3}
   timeBetweenSpawns: 1
   numberOfEnemies: 1
-  doubleWave: 0
-  staggerTime: 0
+  doubleWave: 1
+  staggerTime: 20
   enemyHealth: 10
   enemyTurningSpeed: 10
   enemyMovementSpeed: 10

@@ -18,16 +18,16 @@ MonoBehaviour:
     type: 3}
   pathPrefab: {fileID: 6760382164335102614, guid: a178cf5722f587a40b1430434dabb803,
     type: 3}
-  timeBetweenSpawns: 1
-  numberOfEnemies: 10
+  timeBetweenSpawns: 0.5
+  numberOfEnemies: 15
   doubleWave: 1
-  staggerTime: 0
+  staggerTime: 15
   enemyHealth: 10
   enemyTurningSpeed: 10
   enemyMovementSpeed: 10
   enemyCollisionDamage: 10
   enemyScoreValue: 10
-  enemyFiringSpeed: 1
+  enemyFiringSpeed: 0.5
   enemyProjectileSpeed: 100
   enemyProjectileDamage: 10
   enemyIsAimer: 0
