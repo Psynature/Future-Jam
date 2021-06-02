@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 8508375062667540846, guid: 88005a4ae39811240bb105b5bb829379,
     type: 3}
-  enemyProjectilePrefab: {fileID: 8236357339649165130, guid: 4fa7136101bb24f48ac805589239b91f,
+  enemyProjectilePrefab: {fileID: 6961177082398034295, guid: 42ccd436e61977641bf0edc3bef1ee9c,
     type: 3}
   pathPrefab: {fileID: 6760382164335102614, guid: d1931069105fdef4ab2b4c7fe443c2c2,
     type: 3}
