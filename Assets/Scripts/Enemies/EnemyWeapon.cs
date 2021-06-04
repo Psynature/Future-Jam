@@ -21,7 +21,7 @@ public class EnemyWeapon : Enemy
     // Update is called once per frame
     void Update()
     {   
-        if (enemyIsAimer)
+        if (enemyIsAimer && playerObject != null)
         {
             AimAtPlayer();
         }

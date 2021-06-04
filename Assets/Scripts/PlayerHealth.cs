@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] private int playerHealth = 100;
+    [SerializeField] private int playerHealth;
     [SerializeField] private float maxPlayerDeflectionTime;
     [SerializeField] private List<Sprite> enemyProjectileSprites;
 
@@ -62,6 +62,10 @@ public class PlayerHealth : MonoBehaviour
     {
         playerHealth -= damageDealt;
         gameSession.UpdateHealth(damageDealt);
+        if (playerHealth <= 0)
+        {
+            Time.timeScale = 0;
+        }
     }
 
     private void CheckUsingDeflector()

@@ -382,11 +382,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 447649229032757634, guid: 7923471b36e1aeb439d0752a124b5726,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 447649229032757644, guid: 7923471b36e1aeb439d0752a124b5726,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1747096775}
+    - target: {fileID: 447649229256959020, guid: 7923471b36e1aeb439d0752a124b5726,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -304
+      objectReference: {fileID: 0}
+    - target: {fileID: 447649229256959020, guid: 7923471b36e1aeb439d0752a124b5726,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -373
+      objectReference: {fileID: 0}
     - target: {fileID: 447649229256959023, guid: 7923471b36e1aeb439d0752a124b5726,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -395,7 +410,22 @@ PrefabInstance:
     - target: {fileID: 447649229256959023, guid: 7923471b36e1aeb439d0752a124b5726,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GoToTut
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 447649229337639858, guid: 7923471b36e1aeb439d0752a124b5726,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447649229511376476, guid: 7923471b36e1aeb439d0752a124b5726,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447649229636607912, guid: 7923471b36e1aeb439d0752a124b5726,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 447649229778763002, guid: 7923471b36e1aeb439d0752a124b5726,
         type: 3}
@@ -506,6 +536,32 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BG
+      objectReference: {fileID: 0}
+    - target: {fileID: 447649230273367320, guid: 7923471b36e1aeb439d0752a124b5726,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: db94fe8e9f1a79942ae8b197c6f89961,
+        type: 3}
+    - target: {fileID: 447649230273367320, guid: 7923471b36e1aeb439d0752a124b5726,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 447649230273367320, guid: 7923471b36e1aeb439d0752a124b5726,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 447649230273367320, guid: 7923471b36e1aeb439d0752a124b5726,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 447649230423092764, guid: 7923471b36e1aeb439d0752a124b5726,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 447649230423092766, guid: 7923471b36e1aeb439d0752a124b5726,
         type: 3}

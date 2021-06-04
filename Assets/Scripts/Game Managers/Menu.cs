@@ -4,18 +4,24 @@ using UnityEngine;
 
 public class Menu : MonoBehaviour
 {
-    public static void Play()
+    public void Play()
     {   
         print("This is a test to make sure clicks work");
         UnityEngine.SceneManagement.SceneManager.LoadScene("Level1");
     }
 
-    public static void Quit()
+    public void GoToTut()
+    {
+                print("This is a test to make sure clicks work");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Menu 1");
+    }
+
+    public void Quit()
     {
         print("This is a test to make sure clicks work");
         Application.Quit();
     }
-    public static void Score()
+    public void Score()
     {
         print("This is a test to make sure clicks work");
         UnityEngine.SceneManagement.SceneManager.LoadScene("Score");
